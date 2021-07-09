@@ -9,6 +9,14 @@ function adicionaNaLista () {
     lista.innerText = entradaTexto.value;
     entradaTexto.value = '';
   });
-  
 }
 adicionaNaLista();
+
+function mudaCor () {
+  let listaOrdenada = document.getElementById('lista-tarefas');
+  listaOrdenada.addEventListener('click', function(event) {
+   event.target.classList.add('selected');
+  });
+    
+}
+mudaCor();
