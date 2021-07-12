@@ -23,3 +23,11 @@ function adicionaRetiraBackground () {
   });
 }
 adicionaRetiraBackground ();
+
+function riscaItem () {
+  const risca = document.getElementById('lista-tarefas');
+  risca.addEventListener('dblclick', function (event) {
+    event.target.classList.toggle('completed');
+  });
+}
+riscaItem ();
