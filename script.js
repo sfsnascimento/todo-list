@@ -31,3 +31,15 @@ function riscaItem () {
   });
 }
 riscaItem ();
+
+function apagaTodosItems () {
+  const apagaEl = document.getElementById('apaga-tudo');
+  apagaEl.addEventListener('click', function () {
+//source:https://www.javascripttutorial.net/javascript-dom/javascript-removechild/
+    const elementoPai = document.getElementById('lista-tarefas');
+    while (elementoPai.firstChild) {
+      elementoPai.removeChild(elementoPai.firstChild);
+    } 
+  });
+}
+apagaTodosItems ();
