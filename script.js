@@ -54,3 +54,14 @@ function removeTarefasFinalizadas() {
   });
 }
 removeTarefasFinalizadas();
+
+function removeSelecionado() {
+  const selecionado = document.getElementById('remover-selecionado');
+  selecionado.addEventListener('click', function() {
+    const selecionadoEl = document.getElementsByClassName('selected');
+    while (selecionadoEl[0]) {
+      selecionadoEl[0].remove();
+    } 
+  });
+}
+removeSelecionado();
