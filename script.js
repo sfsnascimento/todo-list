@@ -55,6 +55,20 @@ function removeTarefasFinalizadas() {
 }
 removeTarefasFinalizadas();
 
+function salvaLista() {
+  const botaoSalva = document.getElementById('salvar-tarefas');
+  botaoSalva.addEventListener('click', function() {
+    const salva = document.getElementsByTagName('li');
+    const objetoJson = {};
+    for (let index = 0; index < salva.length; index += 1) {
+      objetoJson.lista = salva[index];
+      
+    }
+    console.log(objetoJson);
+  });
+}
+salvaLista();
+
 function removeSelecionado() {
   const selecionado = document.getElementById('remover-selecionado');
   selecionado.addEventListener('click', function() {
